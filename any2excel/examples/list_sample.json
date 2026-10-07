@@ -1,0 +1,5 @@
+[
+  {"id": 1, "name": "张三", "score": 98.5, "profile": {"city": "上海", "age": 28}},
+  {"id": 2, "name": "李四", "score": 88.0, "profile": {"city": "北京", "age": 30}},
+  {"id": 3, "name": "王五", "score": 76.5, "profile": {"city": "深圳", "age": 25}}
+]

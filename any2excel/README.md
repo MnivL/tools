@@ -2,6 +2,8 @@
 
 将 JSON 数据（标准 JSON 列表与 JSONL）转换为 Excel 工作簿的轻量工具集。
 
+本项目采用 [MIT License](LICENSE) 开源。
+
 ## 目录
 
 - `src/any2excel/`：核心源码

@@ -1,0 +1,19 @@
+# 构建与运行产物
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+dist/
+build/
+*.egg-info/
+
+# uv 缓存
+.uv-cache/
+
+# 输出样例
+*.xlsx
+!examples/*.xlsx
+
+# 本地业务数据，可能包含敏感历史记录
+data/

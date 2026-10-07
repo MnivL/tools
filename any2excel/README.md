@@ -27,11 +27,12 @@ uv sync
 ### JSON 列表 -> Excel
 
 ```bash
-python -m any2excel.json2excel -i data.json -o out.xlsx
-python -m any2excel.json2excel -i data/260923-历史记录到处.json -o data/output/260923-历史记录导出.xlsx
+python -m any2excel.json2excel -i examples/list_sample.json -o examples/list_output.xlsx
 ```
 
-示例 `data.json`：
+示例输入文件：`examples/list_sample.json`
+
+文件内容示例：
 
 ```json
 [
@@ -49,10 +50,12 @@ python -m any2excel.json2excel --data '[{"id":1,"name":"张三"}]' -o out.xlsx
 ### JSONL -> Excel
 
 ```bash
-python -m any2excel.jsonl2excel -i data.jsonl -o out.xlsx
+python -m any2excel.jsonl2excel -i examples/jsonl_sample.jsonl -o examples/jsonl_output.xlsx
 ```
 
-示例 `data.jsonl`：
+示例输入文件：`examples/jsonl_sample.jsonl`
+
+文件内容示例：
 
 ```text
 {"id": 1, "name": "张三", "score": 98.5}
@@ -65,6 +68,16 @@ python -m any2excel.jsonl2excel -i data.jsonl -o out.xlsx
 python -m any2excel.jsonl2excel --data '{"id":1,"name":"张三"}
 {"id":2,"name":"李四"}' -o out.xlsx
 ```
+
+### 输出文件名
+
+如果输出路径没有 `.xlsx` 后缀，工具会自动补上。例如：
+
+```bash
+python -m any2excel.json2excel -i examples/list_sample.json -o examples/list_output
+```
+
+输出文件为 `examples/list_output.xlsx`。示例输出目录也可以换成任意已有写权限的目录。
 
 ## 行为说明
 
@@ -88,8 +101,8 @@ python -m any2excel.jsonl2excel --data '{"id":1,"name":"张三"}
 from any2excel.json2excel import convert as json_convert
 from any2excel.jsonl2excel import convert as jsonl_convert
 
-json_convert([{"a": 1}, {"a": 2}], "out.xlsx")
-jsonl_convert([{"a": 1}, {"a": 2}], "out.xlsx")
+json_convert([{"a": 1}, {"a": 2}], "examples/api_json_output.xlsx")
+jsonl_convert([{"a": 1}, {"a": 2}], "examples/api_jsonl_output.xlsx")
 ```
 
 ### 大文件与 Excel 限制
